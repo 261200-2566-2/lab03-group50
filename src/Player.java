@@ -107,6 +107,9 @@ public class Player {
     public void heal() {
         double h = max_mana/10;
         mana = mana - h;
+        if(mana < 0){
+            return;
+        }
         hp += h;
         if(hp > max_hp){
             hp = max_hp;
